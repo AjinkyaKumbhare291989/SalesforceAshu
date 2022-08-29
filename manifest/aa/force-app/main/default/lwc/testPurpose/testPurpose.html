@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-box slds-p-top_small" style="background-color: white;">
+        <h1> Course</h1><br/>
+        <lightning-record-edit-form object-api-name="Course_Offering__c" id="createContactForm" >
+            <lightning-input-field field-name="Course__c" variant="label-hidden" onchange={handleCourseOfferingSelection} required> </lightning-input-field>
+        </lightning-record-edit-form>
+
+        <lightning-record-edit-form object-api-name="Trainer_Skill__c" id="createTrinerForm" >
+            <lightning-input-field field-name="Skill__c" variant="label-hidden" onchange={handleContactSelection} required> </lightning-input-field>
+        </lightning-record-edit-form>
+
+            <br/>
+        <lightning-button label="Cancel" title="Non-primary action" onclick={CancelButton} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button label="Save" title="Non-primary action" onclick={SaveButton} class="slds-m-left_x-small"></lightning-button>
+
+    </div>
+</template>
